@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+	<mime-type type="text/rhtml">
+		<sub-class-of type="text/html"/>
+		<comment>RHTML Template</comment>
+		<glob pattern="*.rhtml"/>
+		<glob pattern="*.erb"/>
+	</mime-type>
+	<mime-type type="application/x-ruby">
+		<comment>Ruby JavaScript</comment>
+		<glob pattern="*.rjs"/>
+	</mime-type>
+	<mime-type type="application/x-ruby">
+		<comment>Ruby Rakefile</comment>
+		<glob pattern="Rakefile"/>
+	</mime-type>
+	<mime-type type="application/x-ruby">
+		<comment>Ruby Rake Task</comment>
+		<glob pattern="*.rake"/>
+	</mime-type>
+	<mime-type type="application/x-ruby">
+		<comment>Ruby XML Template</comment>
+		<glob pattern="*.rxml"/>
+		<glob pattern="*.builder"/>
+	</mime-type>
+	<mime-type type="text/x-yaml">
+		<comment>YAML Ain't Markup Language</comment>
+		<glob pattern="*.yml"/>
+	</mime-type>
+	<mime-type type="text/x-haml">
+	  <comment>Haml Template Language</comment>
+	  <glob pattern="*.haml"/>
+	</mime-type>
+	<mime-type type="text/x-sass">
+	  <comment>Sass Stylesheet Language</comment>
+	  <glob pattern="*.sass"/>
+	</mime-type>
+</mime-info>
