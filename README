@@ -1,0 +1,37 @@
+== Gedit Extensions
+
+Here are some extensions for Ruby/Rails developpers using gedit.
+
+I found them on the web and written some parts, so if you recognize your work,
+let me know!
+
+== Install
+
+For MIME packages :
+
+  $ sudo cp <package>.xml /usr/share/mime/packages/
+  $ sudo update-mime-database /usr/share/mime
+ 
+For syntax files (.lang)
+
+  $ sudo cp <syntax>.lang /usr/share/gtksourceview-2.0/language-specs/
+
+  Restart gedit if it's already running
+
+== MIME packages
+
+rails.xml:
+  - RHTML Template (*.rhtml, *.erb)
+  - Ruby JavaScript (*.rjs)
+  - Ruby Rakefile (Rakefile)
+  - Ruby Rake Task (*.rake)
+  - Ruby XML Template (*.rxml, *.builder)
+  - YAML Document (*.yml)
+  - Haml Template (*.haml)
+  - Sass Stylesheet (*.sass)
+
+== Language Specs
+
+haml.lang: Specs for the Haml templating language
+sass.lang: Specs for the Sass Stylesheet language 
+
