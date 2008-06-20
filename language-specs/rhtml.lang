@@ -20,7 +20,7 @@
  Boston, MA 02111-1307, USA.
 
 -->
-<language id="php" _name="PHP" version="2.0" _section="Scripts">
+<language id="rhtml" _name="RHTML" version="2.0" _section="Markup">
   <metadata>
     <property name="globs">*.rhtml,*.html.erb</property>
   </metadata>
