@@ -9,30 +9,50 @@
   </metadata>
   <styles>
     <style id="comment"                 _name="Comment"                 map-to="def:comment"/>
+    <style id="css-directives"          _name="CSS Directives"          map-to="def:note"/>
     <style id="tag"                     _name="Tag"                     map-to="def:special-constant"/>
-    <style id="class-tag"               _name="Class Tag"               map-to="def:function"/>
+    <style id="class-tag"               _name="Class Tag"               map-to="def:identifier"/>
     <style id="id-tag"                  _name="Id Tag"                  map-to="def:identifier"/>
     <style id="error"                   _name="Error"                   map-to="def:error"/>
     <style id="keyword"                 _name="Keyword"                 map-to="def:keyword"/>
-    <style id="function"                _name="Function"                map-to="def:function"/>    
-    <style id="known-property-values"   _name="Known Property Value"    map-to="def:type"/>
+    <style id="function"                _name="Function"                map-to="def:function"/>
+    <style id="known-property-values"   _name="Known Property Value"    map-to="def:string"/>
     <style id="decimal"                 _name="Decimal"                 map-to="def:decimal"/>
     <style id="dimension"               _name="Dimension"               map-to="def:floating-point"/>
     <style id="color"                   _name="Color"                   map-to="def:base-n-integer"/>
+    <style id="constant"                _name="Constant"                map-to="def:type"/>
   </styles>
-  
+
   <definitions>
+
+    <context id="color" style-ref="color">
+      <match>#[0-9A-F]{3,6}</match>
+    </context>
+
+
+    <context id="class-tag" style-ref="class-tag">
+      <match>\.[a-z][a-z0-9_-]*</match>
+    </context>
+
     <context id="comment" style-ref="comment">
       <match>^(  )*\/.*$</match>
     </context>
-    
+
+    <context id="constant" style-ref="constant">
+      <match>\![a-zA-Z][a-zA-Z0-9_]*</match>
+    </context>
+
+    <context id="id-tag" style-ref="id-tag">
+      <match>#[a-z][a-z0-9_-]*</match>
+    </context>
+
     <context id="identation-error">
       <match>^( (  )*)[^\s].*$</match>
       <include>
         <context sub-pattern="1" style-ref="error"/>
       </include>
     </context>
-  
+
     <context id="selector-pseudo-elements" style-ref="function">
       <keyword>first-line</keyword>
       <keyword>first-letter</keyword>
@@ -49,9 +69,8 @@
       <keyword>focus</keyword>
       <keyword>lang</keyword>
     </context>
-  
+
     <context id="property-names" style-ref="keyword">
-      <prefix>^(  )+:</prefix>
       <keyword>azimuth</keyword>
       <keyword>background-attachment</keyword>
       <keyword>background-color</keyword>
@@ -59,6 +78,7 @@
       <keyword>background-position</keyword>
       <keyword>background-repeat</keyword>
       <keyword>background</keyword>
+      <keyword>border</keyword>
       <keyword>border-bottom-color</keyword>
       <keyword>border-bottom-style</keyword>
       <keyword>border-bottom-width</keyword>
@@ -75,6 +95,7 @@
       <keyword>border-right</keyword>
       <keyword>border-spacing</keyword>
       <keyword>border-style</keyword>
+      <keyword>style</keyword>
       <keyword>border-top-color</keyword>
       <keyword>border-top-style</keyword>
       <keyword>border-top-width</keyword>
@@ -98,6 +119,7 @@
       <keyword>elevation</keyword>
       <keyword>empty-cells</keyword>
       <keyword>float</keyword>
+      <keyword>family</keyword>
       <keyword>font-family</keyword>
       <keyword>font-size-adjust</keyword>
       <keyword>font-size</keyword>
@@ -106,6 +128,7 @@
       <keyword>font-weight</keyword>
       <keyword>font</keyword>
       <keyword>height</keyword>
+      <keyword>image</keyword>
       <keyword>left</keyword>
       <keyword>letter-spacing</keyword>
       <keyword>line-height</keyword>
@@ -113,6 +136,7 @@
       <keyword>list-style-position</keyword>
       <keyword>list-style-type</keyword>
       <keyword>list-style</keyword>
+      <keyword>margin</keyword>
       <keyword>margin-bottom</keyword>
       <keyword>margin-left</keyword>
       <keyword>margin-right</keyword>
@@ -130,6 +154,7 @@
       <keyword>outline-width</keyword>
       <keyword>outline</keyword>
       <keyword>overflow</keyword>
+      <keyword>position</keyword>
       <keyword>padding-bottom</keyword>
       <keyword>padding-left</keyword>
       <keyword>padding-right</keyword>
@@ -176,6 +201,7 @@
     </context>
 
     <context id="known-property-values" style-ref="known-property-values">
+      <keyword>arial</keyword>
       <keyword>above</keyword>
       <keyword>absolute</keyword>
       <keyword>always</keyword>
@@ -240,6 +266,7 @@
       <keyword>groove</keyword>
       <keyword>hebrew</keyword>
       <keyword>help</keyword>
+      <keyword>helvetica</keyword>
       <keyword>hidden</keyword>
       <keyword>hide</keyword>
       <keyword>higher</keyword>
@@ -399,6 +426,7 @@
       <keyword>h4</keyword>
       <keyword>h5</keyword>
       <keyword>h6</keyword>
+      <keyword>hr</keyword>
       <keyword>strong</keyword>
       <keyword>em</keyword>
       <keyword>quote</keyword>
@@ -413,7 +441,18 @@
       <keyword>ul</keyword>
       <keyword>li</keyword>
     </context>
-    
+
+    <context id="css-directives" style-ref="css-directives">
+      <prefix>@</prefix>
+      <keyword>media</keyword>
+    </context>
+
+    <context id="css-directives-values" style-ref="known-property-values">
+      <keyword>all</keyword>
+      <keyword>print</keyword>
+      <keyword>screen</keyword>
+    </context>
+
     <context id="dimension" style-ref="dimension">
       <match>[\+-]?([0-9]+|[0-9]*\.[0-9]+)(%|e(m|x)|p(x|t|c)|in|ft|(m|c)m|k?Hz|deg|g?rad|m?s)</match>
     </context>
@@ -421,7 +460,7 @@
     <context id="hexadecimal-color" style-ref="color">
       <match>#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})</match>
     </context>
-        
+
     <context id="function" style-ref="function">
       <start>[a-zA-Z][a-z0-9-]+\(</start>
       <end>\)</end>
@@ -438,11 +477,17 @@
     <context id="importance-modifier" style-ref="keyword">
       <match>\![ \t]*important</match>
     </context>
-    
+
+
     <context id="sass">
       <include>
-        <context ref="comment"/> 
-        <context ref="identation-error"/> 
+        <context ref="class-tag"/>
+        <context ref="comment"/>
+        <context ref="constant"/>
+        <context ref="css-directives"/>
+        <context ref="css-directives-values"/>
+        <context ref="id-tag"/>
+        <context ref="identation-error"/>
         <context ref="def:string"/>
         <context ref="def:single-quoted-string"/>
         <context ref="selector-pseudo-elements"/>
@@ -456,7 +501,6 @@
         <context ref="number"/>
         <context ref="importance-modifier"/>
       </include>
-    </context>        
-  </definitions>    
+    </context>
+  </definitions>
 </language>
-
