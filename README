@@ -1,22 +1,26 @@
-== Gedit Extensions
+== Gedit Rails Extensions
 
-Here are some extensions for Ruby/Rails developpers using gedit.
+Here are some extensions for Ruby/Rails developers using gedit.
 
-I found them on the web and written some parts, so if you recognize your work,
-let me know!
 
 == Install
 
-For MIME packages :
+The contained Makefile installs the MIME packages and syntax files to the system directories.
+
+  $ sudo make install
+
+
+For manually installing MIME packages:
 
   $ sudo cp <package>.xml /usr/share/mime/packages/
   $ sudo update-mime-database /usr/share/mime
  
-For syntax files (.lang)
+For manually installing syntax files (.lang):
 
   $ sudo cp <syntax>.lang /usr/share/gtksourceview-2.0/language-specs/
 
   Restart gedit if it's already running
+
 
 == MIME packages
 
