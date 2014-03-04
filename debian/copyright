@@ -1,0 +1,12 @@
+The source for this package comes from:
+ https://github.com/madx/gedit-extensions
+
+
+2008-05-27 madx explained:
+
+"Here are some extensions for Ruby/Rails developpers using gedit.
+
+I found them on the web and written some parts, so if you recognize your work,
+let me know!"
+
+Since this comment is six years old it seems that nobody else claimed ownership of any code in this project.

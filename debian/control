@@ -1,0 +1,12 @@
+Source: gedit-rails-extensions
+Maintainer: Maikel Linke <mkllnk@web.de>
+Section: gnome
+Priority: extra
+Standards-Version: 3.9.2
+Build-Depends: coreutils
+
+Package: gedit-rails-extensions
+Architecture: all
+Depends: gedit, shared-mime-info
+Description: Adds MIME and syntax files to gedit
+ gedit-rails-extensions adds MIME packages and syntax files (.lang) for working with Ruby on Rails.
