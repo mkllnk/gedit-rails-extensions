@@ -37,5 +37,6 @@ rails.xml:
 == Language Specs
 
 haml.lang: Specs for the Haml templating language
+rhtml.lang: Specs for the old Ruby HTML file type
 sass.lang: Specs for the Sass Stylesheet language 
 
