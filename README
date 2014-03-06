@@ -18,6 +18,7 @@ For manually installing MIME packages:
 For manually installing syntax files (.lang):
 
   $ sudo cp <syntax>.lang /usr/share/gtksourceview-2.0/language-specs/
+  $ sudo cp <syntax>.lang /usr/share/gtksourceview-3.0/language-specs/
 
   Restart gedit if it's already running
 
