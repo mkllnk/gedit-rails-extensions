@@ -24,7 +24,7 @@
  If not, see <http://www.gnu.org/licenses/>.
 
 -->
-<language id="sass" _name="SASS" version="2.0" _section="Others">
+<language id="sass" _name="Sass" version="2.0" _section="Others">
   <metadata>
     <property name="mimetypes">text/x-sass</property>
     <property name="globs">*.sass</property>
