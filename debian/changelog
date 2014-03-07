@@ -1,5 +1,10 @@
-gedit-rails-extensions (0.1-1) UNRELEASED; urgency=low
+gedit-rails-extensions (0.2-1) UNRELEASED; urgency=low
 
+  [ Maikel Linke ]
   * Initial release.
 
- -- Maikel Linke <mkllnk@web.de>  Mon, 03 Mar 2014 22:21:37 +1100
+  [ Maikel Linke ]
+  * Upstream merged (glob .scss for sass.lang)
+  * Proper LGPL licensing
+
+ -- Maikel Linke <mkllnk@web.de>  Fri, 07 Mar 2014 13:18:41 +1100

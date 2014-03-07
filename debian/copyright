@@ -1,12 +1,11 @@
-The source for this package comes from:
- https://github.com/madx/gedit-extensions
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://github.com/mkllnk/gedit-rails-extensions
 
-
-2008-05-27 madx explained:
-
-"Here are some extensions for Ruby/Rails developpers using gedit.
-
-I found them on the web and written some parts, so if you recognize your work,
-let me know!"
-
-Since this comment is six years old it seems that nobody else claimed ownership of any code in this project.
+Files: *
+Copyright: 2014 Maikel Linke
+           2009 Ivan Torres
+           2008, 2009 François Vaux
+           2008 Ivan Kerin
+           2008 Robert Nasiadek
+License: LGPL-3+
+ `/usr/share/common-licenses/LGPL-3'.
