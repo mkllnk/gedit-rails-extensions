@@ -6,6 +6,7 @@
  Author: Ivan Kerin <kerin@rizn.info>
  Copyright (c) 2008 Ivan Kerin <kerin@rizn.info>
  Copyright (c) 2009 Ivan Torres <ivan@innetra.com>
+ Copyright (c) 2014 Maikel Linke <mkllnk@web.de>
 
  gedit-rails-extensions is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -26,6 +27,7 @@
   <metadata>
     <property name="mimetypes">text/x-sass</property>
     <property name="globs">*.sass</property>
+    <property name="globs">*.scss</property>
   </metadata>
   <styles>
     <style id="comment"                 _name="Comment"                 map-to="def:comment"/>
