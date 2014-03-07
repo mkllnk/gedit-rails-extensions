@@ -6,6 +6,7 @@
  Author: Ivan Kerin <kerin@rizn.info>
  Copyright (c) 2008 Ivan Kerin <kerin@rizn.info>
  Copyright (c) 2009 Ivan Torres <ivan@innetra.com>
+ Copyright (c) 2010 Andrey Sitnik <andrey@sitnik.ru>
  Copyright (c) 2014 Maikel Linke <mkllnk@web.de>
 
  gedit-rails-extensions is free software; you can redistribute it and/or
@@ -56,7 +57,7 @@
       <match>\.[a-z][a-z0-9_-]*</match>
     </context>
 
-    <context id="comment" style-ref="comment">
+    <context id="comment" style-ref="comment" class-disabled="no-spell-check">
       <match>^(  )*\/.*$</match>
     </context>
 
@@ -501,7 +502,7 @@
     </context>
 
 
-    <context id="sass">
+    <context id="sass" class-disabled="no-spell-check">
       <include>
         <context ref="class-tag"/>
         <context ref="comment"/>

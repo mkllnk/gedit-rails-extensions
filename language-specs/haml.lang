@@ -5,6 +5,7 @@
  
  Author: Ivan Kerin <kerin@rizn.info>
  Copyright (c) 2008 Ivan Kerin <kerin@rizn.info>
+ Copyright (c) 2010 Andrey Sitnik <andrey@sitnik.ru>
 
  gedit-rails-extensions is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -53,7 +54,7 @@
       
       <include>
       
-        <context id="erb-block" end-parent="true">
+        <context id="erb-block" end-parent="true" class="no-spell-check">
           <start>=|-|~</start>
           <end>$</end>
           <include>
@@ -61,15 +62,15 @@
           </include>
         </context>
         
-        <context id="tag" style-ref="tag" once-only="true">
+        <context id="tag" style-ref="tag" once-only="true" class="no-spell-check">
           <match>%[a-zA-Z0-9\-\_]+</match>
         </context>
         
-        <context id="id-tag" style-ref="id-tag">
+        <context id="id-tag" style-ref="id-tag" class="no-spell-check">
           <match>#[a-zA-Z0-9\-\_]+</match>
         </context>
         
-        <context id="class-tag" style-ref="class-tag">
+        <context id="class-tag" style-ref="class-tag" class="no-spell-check">
           <match>\.[a-zA-Z0-9\-\_]+</match>
         </context>
         
@@ -77,7 +78,7 @@
           <match>\}(?!{)</match>
         </context>
         
-        <context id="erb-hash">
+        <context id="erb-hash" class="no-spell-check">
           <start>{</start>
           <end>}</end>
           <include>
