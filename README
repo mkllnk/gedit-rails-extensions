@@ -44,18 +44,18 @@ sass.lang: Specs for the Sass Stylesheet language
 
 == Authors / Contributors
 
-François Vaux <madx+github@yapok.org> agrees to publishing under GNU LGPL or even MIT.
+François Vaux <madx+github@yapok.org>
  - project founder
  - README original author
-Ivan Kerin <kerin@rizn.info> agrees to publishing under GNU LGPL.
+Ivan Kerin <kerin@rizn.info>
  - haml.lang original author
  - sass.lang original author
-Ivan Torres <ivan@innetra.com> enhanced sass.lang, leaving licensing to Ivan Kerin.
+Ivan Torres <ivan@innetra.com>
  - sass.lang enhanced
-Maikel Linke <mkllnk@web.de> agrees to publishing under GNU LGPL.
+Maikel Linke <mkllnk@web.de>
  - debian folder (branch) original author
  - MAKEFILE original author
  - README modified
-Robert Nasiadek <robert.nasiadek@elpassion.pl> agrees to publishing under GNU LGPL.
+Robert Nasiadek <robert.nasiadek@elpassion.pl>
  - rails.xml original author
  - rhtml.lang original author
