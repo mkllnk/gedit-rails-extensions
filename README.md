@@ -23,6 +23,21 @@ For manually installing syntax files (.lang):
     sudo cp language-specs/*.lang /usr/share/gtksourceview-3.0/language-specs/ # for gedit-3
 
 
+## Build a Debian Package
+
+There are three steps to build a Debian package from this repository:
+
+    git archive --format=tar.gz --prefix=gedit-rails-extensions-0.1/ HEAD \
+        > /tmp/gedit-rails-extensions_0.1.orig.tar.gz
+    cd /tmp && tar xf gedit-rails-extensions_0.1.orig.tar.gz
+    cd gedit-rails-extensions-0.1 && debuild -us -uc
+
+Be careful with the file names. The packaging tools need a certain structure.
+The version number, in this example 0.1, has to be changed to the version noted 
+in `debian/changelog`.
+You find more information on: https://wiki.debian.org/IntroDebianPackaging
+
+
 ## MIME packages
 
 rails.xml:
