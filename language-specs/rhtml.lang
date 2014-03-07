@@ -21,7 +21,7 @@
  If not, see <http://www.gnu.org/licenses/>.
 
 -->
-<language id="rhtml" _name="RHTML" version="2.0" _section="Markup">
+<language id="rhtml" _name="RHTML/ERB" version="2.0" _section="Markup">
     <metadata>
       <property name="mimetypes">text/rhtml</property>
       <property name="globs">*.rhtml</property>
