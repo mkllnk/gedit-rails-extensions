@@ -8,18 +8,19 @@ Here are some extensions for Ruby/Rails developers using gedit.
 The contained Makefile installs the MIME packages and syntax files to the system directories.
 
     sudo make install
+    sudo update-mime-database /usr/share/mime
+
+Restart gedit if it's already running.
 
 For manually installing MIME packages:
 
-    sudo cp <package>.xml /usr/share/mime/packages/
+    sudo cp mime-packages/rails.xml /usr/share/mime/packages/
     sudo update-mime-database /usr/share/mime
  
 For manually installing syntax files (.lang):
 
-    sudo cp <syntax>.lang /usr/share/gtksourceview-2.0/language-specs/
-    sudo cp <syntax>.lang /usr/share/gtksourceview-3.0/language-specs/
-
-Restart gedit if it's already running.
+    sudo cp language-specs/*.lang /usr/share/gtksourceview-2.0/language-specs/ # for gedit-2
+    sudo cp language-specs/*.lang /usr/share/gtksourceview-3.0/language-specs/ # for gedit-3
 
 
 ## MIME packages
