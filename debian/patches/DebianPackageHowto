@@ -1,0 +1,41 @@
+Description: Debian packaging howto
+ Adds a packaging howto to the README.md file.
+ .
+ gedit-rails-extensions (0.3) UNRELEASED; urgency=low
+ .
+   * added .erb globs
+   * added ERB to RHTML name
+   * Install instructions updated.
+   * Old copyright summary removed. Current informations are in the files and a summary in the debian branch: debian/copyright
+   * Old README removed. Replaced by markdown version.
+   * Markdown version of README
+   * Sass is capitalised.
+   * Partly merged "Disable spell-check for code in language specs" from gmate. 7f739986ec3c180cadedefcbb3f88c6158711181
+   * Haml is just capitalized
+Author: Maikel Linke <mkllnk@web.de>
+
+---
+--- gedit-rails-extensions-0.3.orig/README.md
++++ gedit-rails-extensions-0.3/README.md
+@@ -23,6 +23,21 @@ For manually installing syntax files (.l
+     sudo cp language-specs/*.lang /usr/share/gtksourceview-3.0/language-specs/ # for gedit-3
+ 
+ 
++## Build a Debian Package
++
++There are three steps to build a Debian package from this repository:
++
++    git archive --format=tar.gz --prefix=gedit-rails-extensions-0.1/ HEAD \
++        > /tmp/gedit-rails-extensions_0.1.orig.tar.gz
++    cd /tmp && tar xf gedit-rails-extensions_0.1.orig.tar.gz
++    cd gedit-rails-extensions-0.1 && debuild -us -uc
++
++Be careful with the file names. The packaging tools need a certain structure.
++The version number, in this example 0.1, has to be changed to the version noted 
++in `debian/changelog`.
++You find more information on: https://wiki.debian.org/IntroDebianPackaging
++
++
+ ## MIME packages
+ 
+ rails.xml:
