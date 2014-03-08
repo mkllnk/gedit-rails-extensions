@@ -1,4 +1,4 @@
-gedit-rails-extensions (0.3) UNRELEASED; urgency=low
+gedit-rails-extensions (0.3-1) unstable; urgency=low
 
   * added .erb globs
   * added ERB to RHTML name
@@ -10,7 +10,7 @@ gedit-rails-extensions (0.3) UNRELEASED; urgency=low
   * Partly merged "Disable spell-check for code in language specs" from gmate. 7f739986ec3c180cadedefcbb3f88c6158711181
   * Haml is just capitalized
 
- -- Maikel Linke <mkllnk@web.de>  Sat, 08 Mar 2014 22:12:41 +1100
+ -- Maikel Linke <mkllnk@web.de>  Sun, 09 Mar 2014 00:39:01 +1100
 
 gedit-rails-extensions (0.2-1) unstable; urgency=low
 
