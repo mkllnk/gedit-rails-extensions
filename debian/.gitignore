@@ -1,0 +1,6 @@
+files
+gedit-rails-extensions.debhelper.log
+gedit-rails-extensions.postinst.debhelper
+gedit-rails-extensions.postrm.debhelper
+gedit-rails-extensions.substvars
+gedit-rails-extensions/
