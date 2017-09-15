@@ -74,10 +74,6 @@
           <match>\.[a-zA-Z0-9\-\_]+</match>
         </context>
         
-        <context id="unclosed-brecket" style-ref="error">
-          <match>\}(?!{)</match>
-        </context>
-        
         <context id="erb-hash" class="no-spell-check">
           <start>{</start>
           <end>}</end>
